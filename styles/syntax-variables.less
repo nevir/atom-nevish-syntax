@@ -1,0 +1,30 @@
+@import '../vendor/nevish/less/palette';
+
+// General
+@syntax-text-color:            @nevish-palette-foreground;
+@syntax-cursor-color:          @nevish-palette-foreground-light-2;
+@syntax-selection-color:       @nevish-palette-background-dark-2;
+@syntax-selection-flash-color: @nevish-palette-primary;
+@syntax-background-color:      @nevish-palette-background;
+
+// Guide
+@syntax-wrap-guide-color:          @nevish-palette-background-light-2;
+@syntax-indent-guide-color:        @nevish-palette-complement;
+@syntax-invisible-character-color: @nevish-palette-complement;
+@syntax-cursor-line:               fade(@nevish-palette-background-dark-2, 50%);
+
+// Find/Replace
+@syntax-result-marker-color:          @nevish-palette-primary;
+@syntax-result-marker-color-selected: @nevish-palette-primary;
+
+// Gutter
+@syntax-gutter-text-color:                @nevish-palette-foreground-dark-2;
+@syntax-gutter-text-color-selected:       @nevish-palette-foreground-dark-2;
+@syntax-gutter-background-color:          cyan;
+@syntax-gutter-background-color-selected: @nevish-palette-background-dark-2;
+
+// VCS
+@syntax-color-renamed:  hsl(208, 100%, 60%);
+@syntax-color-added:    hsl(150,  60%, 54%);
+@syntax-color-modified: hsl(40,   60%, 70%);
+@syntax-color-removed:  hsl(0,    70%, 60%);
