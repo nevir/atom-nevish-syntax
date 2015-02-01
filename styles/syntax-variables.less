@@ -1,30 +1,37 @@
 @import '../vendor/nevish/less/palette';
 
+// Atom Common Variables
+
 // General
 @syntax-text-color:            @nevish-palette-foreground;
-@syntax-cursor-color:          @nevish-palette-foreground-light-2;
-@syntax-selection-color:       @nevish-palette-background-dark-2;
-@syntax-selection-flash-color: @nevish-palette-primary;
+@syntax-cursor-color:          @nevish-palette-foreground-light2;
+@syntax-selection-color:       @nevish-palette-background-dark1;
+@syntax-selection-flash-color: magenta;
 @syntax-background-color:      @nevish-palette-background;
 
 // Guide
-@syntax-wrap-guide-color:          @nevish-palette-background-light-2;
-@syntax-indent-guide-color:        @nevish-palette-complement;
-@syntax-invisible-character-color: @nevish-palette-complement;
-@syntax-cursor-line:               fade(@nevish-palette-background-dark-2, 50%);
+@syntax-wrap-guide-color:          @nevish-palette-background-light2;
+@syntax-indent-guide-color:        @nevish-palette-background-light1;
+@syntax-invisible-character-color: @nevish-palette-background-light2;
+@syntax-cursor-line:               fade(@nevish-palette-background-dark1, 33%);
 
 // Find/Replace
-@syntax-result-marker-color:          @nevish-palette-primary;
-@syntax-result-marker-color-selected: @nevish-palette-primary;
+@syntax-result-marker-color:          @nevish-palette-foreground-primary;
+@syntax-result-marker-color-selected: @nevish-palette-foreground-complement;
 
 // Gutter
-@syntax-gutter-text-color:                @nevish-palette-foreground-dark-2;
-@syntax-gutter-text-color-selected:       @nevish-palette-foreground-dark-2;
-@syntax-gutter-background-color:          cyan;
-@syntax-gutter-background-color-selected: @nevish-palette-background-dark-2;
+@syntax-gutter-text-color:                @nevish-palette-foreground-dark2;
+@syntax-gutter-text-color-selected:       @nevish-palette-foreground-dark2;
+@syntax-gutter-background-color:          magenta;
+@syntax-gutter-background-color-selected: @nevish-palette-background-dark1;
 
 // VCS
-@syntax-color-renamed:  hsl(208, 100%, 60%);
-@syntax-color-added:    hsl(150,  60%, 54%);
-@syntax-color-modified: hsl(40,   60%, 70%);
-@syntax-color-removed:  hsl(0,    70%, 60%);
+@syntax-color-renamed:  @nevish-palette-neutral-warning;
+@syntax-color-added:    @nevish-palette-neutral-success;
+@syntax-color-modified: @nevish-palette-neutral-warning;
+@syntax-color-removed:  @nevish-palette-neutral-error;
+
+// Nevish Extensions
+
+@syntax-bracket-matcher-highlight: @nevish-palette-foreground-primary;
+@syntax-faded-opacity:             0.8;                  

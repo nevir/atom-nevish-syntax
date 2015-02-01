@@ -1,0 +1,84 @@
+@import './language/markup';
+@import './language/gfm';
+@import './language/html';
+
+@import 'syntax-variables';
+
+// General Language Features
+
+.comment {
+  opacity: @syntax-faded-opacity;
+}
+
+.entity {
+  &.name, &.attribute-name {
+    color: @nevish-palette-foreground-primary;
+  }
+}
+
+.support {
+  &.property-name {
+    color: @nevish-palette-foreground-complement;
+  }
+
+  &.class {
+    color: @nevish-palette-foreground-triad1;
+  }
+
+  &.function {
+    color: @nevish-palette-foreground-primary;
+  }
+}
+
+.keyword {
+  color: @nevish-palette-foreground-triad2;
+
+  &.operator {
+    color: inherit;
+  }
+}
+
+.constant {
+  color: @nevish-palette-foreground-complement;
+
+  &.character, &.character-class {
+    color: inherit;
+  }
+
+  &.symbol {
+    color: @nevish-palette-foreground-split2;
+  }
+
+  .punctuation {
+    color: inherit;
+  }
+}
+
+.string {
+  color: @nevish-palette-foreground-split1;
+
+  &.regexp {
+    .keyword {
+      color: @nevish-palette-foreground-triad2;
+    }
+    .character-class.set {
+      color: @nevish-palette-foreground-complement;
+    }
+  }
+}
+
+.storage {
+  color: @nevish-palette-foreground-split2;
+}
+
+.variable {
+  color: @nevish-palette-foreground-complement;
+}
+
+.invalid {
+  color: magenta;
+}
+
+.none {
+  color: magenta;
+}

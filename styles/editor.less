@@ -1,15 +1,13 @@
 @import 'syntax-variables';
 
 :host {
-  background-color: @syntax-background-color;
-  color: @syntax-text-color;
+  background-color:       @syntax-background-color;
+  color:                  @syntax-text-color;
+  // http://www.lighterra.com/articles/macosxtextaabug/
+  -webkit-font-smoothing: antialiased;
 
   .line.cursor-line {
     background-color: @syntax-cursor-line;
-  }
-
-  .invisible {
-    color: @syntax-text-color;
   }
 
   .cursor {
@@ -21,9 +19,13 @@
   }
 
   .bracket-matcher .region {
-    border-bottom: 1px solid @syntax-cursor-color;
-    box-sizing: border-box;
-    // background-color: @syntax-bracket-matcher-background-color;
+    border-bottom: 1px solid @syntax-bracket-matcher-highlight;
+    box-sizing:    border-box;
+  }
+
+  .invisible {
+    // color: @syntax-text-color;
+    color: magenta;
   }
 
   .invisible-character {
@@ -42,23 +44,9 @@
 
     .line-number {
       color: @syntax-gutter-text-color;
-      -webkit-font-smoothing: antialiased;
-
-      &.git-line-removed:before {
-        bottom: -3px;
-      }
-      &.git-line-removed:after {
-        content: "";
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
-        width: 25px;
-        border-bottom: 1px dotted fade(@syntax-color-removed, 50%);
-        pointer-events: none;
-      }
 
       &.cursor-line {
-        color: @syntax-gutter-text-color-selected;
+        color:            @syntax-gutter-text-color-selected;
         background-color: @syntax-gutter-background-color-selected;
       }
 
@@ -81,4 +69,5 @@
   .fold-marker:after {
     color: @syntax-gutter-text-color-selected;
   }
+
 }

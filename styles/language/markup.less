@@ -1,0 +1,36 @@
+@import 'syntax-variables';
+
+.markup {
+  &.bold {
+    font-weight: bold;
+  }
+  &.italic {
+    font-style: italic;
+  }
+  &.strike {
+    text-decoration: line-through;
+  }
+
+  &.heading {
+    color: @nevish-palette-foreground-primary;
+  }
+
+  &.link {
+    opacity: @syntax-faded-opacity;
+    color:   @nevish-palette-foreground-split2;
+  }
+
+  &.raw.inline {
+    // color: @green;
+  }
+
+  &.changed {
+    color: @nevish-palette-neutral-warning;
+  }
+  &.deleted {
+    color: @nevish-palette-neutral-error;
+  }
+  &.inserted {
+    color: @nevish-palette-neutral-success;
+  }
+}
